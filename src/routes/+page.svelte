@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { slide } from 'svelte/transition';
+	import { base } from '$app/paths';
 	import EmblaCarousel, { type EmblaCarouselType } from 'embla-carousel';
 	import ContactPopup from '$lib/ContactPopup.svelte';
 	import NoticePopup from '$lib/NoticePopup.svelte';
@@ -27,16 +28,16 @@
 	let gallShowAll = $state(false);
 
 	const GALLERY_PHOTOS = [
-		{ src: '/opt/YOON1767.webp', alt: '웨딩 사진 1' },
-		{ src: '/opt/YOON2072.webp', alt: '웨딩 사진 2' },
-		{ src: '/opt/YOON2017.webp', alt: '웨딩 사진 3' },
-		{ src: '/opt/YOON1900.webp', alt: '웨딩 사진 4' },
-		{ src: '/opt/YOON1973.webp', alt: '웨딩 사진 5' },
-		{ src: '/opt/YOON1719.webp', alt: '웨딩 사진 6' },
-		{ src: '/opt/YOON1855.webp', alt: '웨딩 사진 7' },
-		{ src: '/opt/YOON1787.webp', alt: '웨딩 사진 8' },
-		{ src: '/opt/YOON1582.webp', alt: '웨딩 사진 9' },
-		{ src: '/opt/YOON1506.webp', alt: '웨딩 사진 10' },
+		{ src: `${base}/opt/YOON1767.webp`, alt: '웨딩 사진 1' },
+		{ src: `${base}/opt/YOON2072.webp`, alt: '웨딩 사진 2' },
+		{ src: `${base}/opt/YOON2017.webp`, alt: '웨딩 사진 3' },
+		{ src: `${base}/opt/YOON1900.webp`, alt: '웨딩 사진 4' },
+		{ src: `${base}/opt/YOON1973.webp`, alt: '웨딩 사진 5' },
+		{ src: `${base}/opt/YOON1719.webp`, alt: '웨딩 사진 6' },
+		{ src: `${base}/opt/YOON1855.webp`, alt: '웨딩 사진 7' },
+		{ src: `${base}/opt/YOON1787.webp`, alt: '웨딩 사진 8' },
+		{ src: `${base}/opt/YOON1582.webp`, alt: '웨딩 사진 9' },
+		{ src: `${base}/opt/YOON1506.webp`, alt: '웨딩 사진 10' },
 	];
 	let endingEl: HTMLElement | null = null;
 	let endingRevealed = $state(false);
@@ -47,29 +48,29 @@
 
 	// ─── 사진 src를 실제 경로로 교체하세요 ───────────────────────
 	// 커버 사진
-	const COVER_SRC  = '/opt/cover_img.webp';
-	const ENDING_SRC = '/opt/ending_img.webp';
-	const BGM_SRC    = '/bgm.mp3'; // ← static/bgm.mp3 파일을 추가하세요
+	const COVER_SRC  = `${base}/opt/cover_img.webp`;
+	const ENDING_SRC = `${base}/opt/ending_img.webp`;
+	const BGM_SRC    = `${base}/bgm.mp3`; // ← static/bgm.mp3 파일을 추가하세요
 	// 신랑/신부 프로필
 	const GROOM_SRC = 'https://picsum.photos/seed/groom/300/400';
 	const BRIDE_SRC = 'https://picsum.photos/seed/bride/300/400';
 	// 갤러리 (6장)
 	const photos = [
-		{ src: '/opt/YOON1895.webp', alt: '커버 사진' },      // [0]  커버
-		{ src: '/opt/YOON1895.webp', alt: '2024 사진 1' },    // [1]  2024
-		{ src: '/opt/YOON1895.webp', alt: '2024 사진 2' },    // [2]  2024
-		{ src: '/opt/YOON1895.webp', alt: '2025 사진 1' },    // [3]  2025
-		{ src: '/opt/YOON1895.webp', alt: '2025 사진 2' },    // [4]  2025
-		{ src: '/opt/YOON1895.webp', alt: '2019 사진 1' },    // [5]  2019
-		{ src: '/opt/YOON1895.webp', alt: '2019 사진 2' },    // [6]  2019
-		{ src: '/opt/YOON1895.webp', alt: '2020 사진 1' },    // [7]  2020
-		{ src: '/opt/YOON1895.webp', alt: '2020 사진 2' },    // [8]  2020
-		{ src: '/opt/YOON1895.webp', alt: '2021 사진 1' },    // [9]  2021
-		{ src: '/opt/YOON1895.webp', alt: '2021 사진 2' },    // [10] 2021
-		{ src: '/opt/YOON1895.webp', alt: '2022 사진 1' },    // [11] 2022
-		{ src: '/opt/YOON1895.webp', alt: '2022 사진 2' },    // [12] 2022
-		{ src: '/opt/YOON1895.webp', alt: '2023 사진 1' },    // [13] 2023
-		{ src: '/opt/YOON1895.webp', alt: '2023 사진 2' },    // [14] 2023
+		{ src: `${base}/opt/YOON1895.webp`, alt: '커버 사진' },      // [0]  커버
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2024 사진 1' },    // [1]  2024
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2024 사진 2' },    // [2]  2024
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2025 사진 1' },    // [3]  2025
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2025 사진 2' },    // [4]  2025
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2019 사진 1' },    // [5]  2019
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2019 사진 2' },    // [6]  2019
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2020 사진 1' },    // [7]  2020
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2020 사진 2' },    // [8]  2020
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2021 사진 1' },    // [9]  2021
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2021 사진 2' },    // [10] 2021
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2022 사진 1' },    // [11] 2022
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2022 사진 2' },    // [12] 2022
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2023 사진 1' },    // [13] 2023
+		{ src: `${base}/opt/YOON1895.webp`, alt: '2023 사진 2' },    // [14] 2023
 	];
 
 	// ─── Our Story 내용 교체하세요 ──────────────────────────────
