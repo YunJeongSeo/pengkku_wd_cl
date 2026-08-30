@@ -28,16 +28,23 @@
 	let gallShowAll = $state(false);
 
 	const GALLERY_PHOTOS = [
-		{ src: `${base}/opt/YOON1767.webp`, alt: '웨딩 사진 1' },
-		{ src: `${base}/opt/YOON2072.webp`, alt: '웨딩 사진 2' },
-		{ src: `${base}/opt/YOON2017.webp`, alt: '웨딩 사진 3' },
-		{ src: `${base}/opt/YOON1900.webp`, alt: '웨딩 사진 4' },
-		{ src: `${base}/opt/YOON1973.webp`, alt: '웨딩 사진 5' },
-		{ src: `${base}/opt/YOON1719.webp`, alt: '웨딩 사진 6' },
-		{ src: `${base}/opt/YOON1855.webp`, alt: '웨딩 사진 7' },
-		{ src: `${base}/opt/YOON1787.webp`, alt: '웨딩 사진 8' },
-		{ src: `${base}/opt/YOON1582.webp`, alt: '웨딩 사진 9' },
-		{ src: `${base}/opt/YOON1506.webp`, alt: '웨딩 사진 10' },
+		{ src: `${base}/opt/gallery-01.webp`, alt: '웨딩 사진 1' },
+		{ src: `${base}/opt/gallery-02.webp`, alt: '웨딩 사진 2' },
+		{ src: `${base}/opt/gallery-03.webp`, alt: '웨딩 사진 3' },
+		{ src: `${base}/opt/gallery-04.webp`, alt: '웨딩 사진 4' },
+		{ src: `${base}/opt/gallery-05.webp`, alt: '웨딩 사진 5' },
+		{ src: `${base}/opt/gallery-06.webp`, alt: '웨딩 사진 6' },
+		{ src: `${base}/opt/gallery-07.webp`, alt: '웨딩 사진 7' },
+		{ src: `${base}/opt/gallery-08.webp`, alt: '웨딩 사진 8' },
+		{ src: `${base}/opt/gallery-09.webp`, alt: '웨딩 사진 9' },
+		{ src: `${base}/opt/gallery-10.webp`, alt: '웨딩 사진 10' },
+		{ src: `${base}/opt/gallery-11.webp`, alt: '웨딩 사진 11' },
+		{ src: `${base}/opt/gallery-12.webp`, alt: '웨딩 사진 12' },
+		{ src: `${base}/opt/gallery-13.webp`, alt: '웨딩 사진 13' },
+		{ src: `${base}/opt/gallery-14.webp`, alt: '웨딩 사진 14' },
+		{ src: `${base}/opt/gallery-15.webp`, alt: '웨딩 사진 15' },
+		{ src: `${base}/opt/gallery-16.webp`, alt: '웨딩 사진 16' },
+		{ src: `${base}/opt/gallery-17.webp`, alt: '웨딩 사진 17' },
 	];
 	let endingEl: HTMLElement | null = null;
 	let endingRevealed = $state(false);
@@ -450,9 +457,30 @@
 </section>
 
 
+<!-- ═══════════════════════════════════════════════════════════
+     6. 식사 안내
+═══════════════════════════════════════════════════════════ -->
+<section class="sec meal-sec">
+
+	<div class="inv-header fi">
+		<span class="lbl">MEAL</span>
+		<p class="ko-title">식사 안내</p>
+	</div>
+
+	<div class="meal-info fi d1">
+		<p class="meal-place">예식 후 벡스코 지하 1층 더파티에<br />식사가 준비되어 있습니다.</p>
+		<p class="meal-desc">
+			귀한 걸음 해주신 만큼<br />
+			맛있는 식사와 함께 따뜻한 시간 보내고 가세요.<br />
+			참석해 주셔서 진심으로 감사드립니다.
+		</p>
+	</div>
+
+</section>
+
 
 <!-- ═══════════════════════════════════════════════════════════
-     6. Our Story 타임라인
+     7. Our Story 타임라인
 ═══════════════════════════════════════════════════════════ -->
 <section class="sec-timeline" style="display:none">
 	<div class="tl-viewport" bind:this={emblaEl}>
@@ -498,7 +526,7 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     7. 갤러리
+     8. 갤러리
 ═══════════════════════════════════════════════════════════ -->
 <section class="sec gall-sec">
 
@@ -549,7 +577,7 @@
 {/if}
 
 <!-- ═══════════════════════════════════════════════════════════
-     8. 방명록
+     9. 방명록
 ═══════════════════════════════════════════════════════════ -->
 <section class="sec gb-sec">
 
@@ -579,7 +607,7 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     8. 마음 전하실 곳
+     10. 마음 전하실 곳
 ═══════════════════════════════════════════════════════════ -->
 <section class="acc-sec" style="display:none">
 
@@ -640,7 +668,7 @@
 
 
 <!-- ═══════════════════════════════════════════════════════════
-     9. 엔딩 (공유 + Footer)
+     11. 엔딩 (공유 + Footer)
 ═══════════════════════════════════════════════════════════ -->
 <div class="ending-area">
 
@@ -917,6 +945,12 @@
 	.tp-item:first-child { border-top: 1px solid var(--line); }
 	.tp-title { font-size: 14px; font-weight: 500; color: #121212; min-width: 44px; padding-top: 2px; }
 	.tp-content p { font-size: 14px; color: var(--sub); line-height: 1.75; margin: 0; }
+
+	/* ── Meal ───────────────────────────────────────────────── */
+	.meal-sec { text-align: center; }
+	.meal-info { margin-top: 1.6rem; }
+	.meal-place { font-size: clamp(15px, 4.2vw, 17px); color: #121212; line-height: 1.7; margin-bottom: 1rem; }
+	.meal-desc { font-size: clamp(13px, 3.8vw, 15px); color: var(--sub); line-height: 1.8; }
 
 	/* ── Our Story Timeline (Embla 가로 슬라이더) ───────────── */
 	.sec-timeline {
